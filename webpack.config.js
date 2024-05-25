@@ -1,9 +1,9 @@
 const path = require('node:path');
 
 module.exports = {
-    mode: 'none',
+    mode: 'development',
     entry: { 
-        index: './site-source/index.ts',  
+        index: './site-source/index.tsx',  
     },
     output: {
         path: path.resolve(__dirname, 'site'),

@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
         "rootDir": "site-source",
+        "esModuleInterop": true,
+        "jsx": "react",
+        "module": "es6",
     }
 }
