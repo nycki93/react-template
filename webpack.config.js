@@ -2,7 +2,9 @@ const path = require('node:path');
 
 module.exports = {
     mode: 'none',
-    entry: { },
+    entry: { 
+        index: './site-source/index.ts',  
+    },
     output: {
         path: path.resolve(__dirname, 'site'),
     },
@@ -11,5 +13,17 @@ module.exports = {
         static: {
             directory: path.resolve(__dirname, 'site-static'),
         },
+    },
+    module: {
+        rules: [
+            {
+                test: /\.ts(x)?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
 };
